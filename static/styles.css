@@ -1,0 +1,94 @@
+html, body, h1, p, div, ul, li, dl, dt, dd, a, form, label, input {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #333;
+    background-color: #fff;
+    border: 3em solid #bfa99b;
+    font-family: sans-serif;
+    font-size: 100%;
+}
+
+h1 {
+    font-size: 300%;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 1em;
+    padding: 0.5em;
+    border-top: 0.01em solid #333;
+    border-bottom: 0.01em solid #333;
+}
+
+a {
+    color: #361600;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+form, ul, dl {
+    padding: 1em;
+}
+
+li {
+    list-style-type: none;
+}
+
+body > ul > li {
+    font-size: 200%;
+    margin-top: 2em;
+    text-transform: uppercase;
+}
+
+body > ul > li > ul > li {
+    font-size: 75%;
+    margin-top: 0;
+    text-transform: capitalize;
+}
+
+form div {
+    margin-bottom: 1em;
+}
+
+input, label {
+    font-size: 150%;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    display: block;
+}
+
+input[type=submit] {
+    padding: 0.25em;
+}
+
+dt {
+    font-size: 200%;
+    text-transform: uppercase;
+    margin-top: 2em;
+}
+
+dd {
+    font-size: 150%;
+}
+
+p {
+    font-size: 150%;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 2em 2em 2em 2em;
+}
+
+#flash {
+    background: #5d493c;
+    color: #fff;
+}

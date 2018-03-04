@@ -9,27 +9,24 @@
 <body>
 <h1>Restaurants</h1>
 
-<div class="flash">
+<p id="flash">
 {% with messages = get_flashed_messages() %}
   {% if messages %}
-    <ul>
     {% for message in messages %}
-      <li>{{ message }}</li>
+      {{ message }}
     {% endfor %}
-    </ul>
     {% endif %}
 {% endwith %}
-</div>
+</p>
 
-<div><a href="{{url_for('newRestaurant') }}">New Restaurant</a></div>
+<p><a href="{{url_for('newRestaurant') }}">New Restaurant</a></p>
 
 <ul>
 {% for restaurant in restaurants %}
 
 <li><a href="{{url_for('showMenu', restaurant_id=restaurant.id) }}">{{restaurant.name}}</a>
 	<ul>
-  	<li><a href="{{url_for('editRestaurant', restaurant_id=restaurant.id) }}">Edit</a></li>
-  	<li><a href="{{url_for('deleteRestaurant', restaurant_id=restaurant.id) }}">Delete</a></li>
+  	<li><a href="{{url_for('editRestaurant', restaurant_id=restaurant.id) }}">Edit</a> <a href="{{url_for('deleteRestaurant', restaurant_id=restaurant.id) }}">Delete</a></li>
 	</ul>
 </li>
 

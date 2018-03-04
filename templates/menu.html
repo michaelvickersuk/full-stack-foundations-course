@@ -9,19 +9,17 @@
 <body>
 <h1>{{restaurant.name}}</h1>
 
-<div class="flash">
+<p id="flash">
 {% with messages = get_flashed_messages() %}
   {% if messages %}
-    <ul>
     {% for message in messages %}
-      <li>{{ message }}</li>
+      {{ message }}
     {% endfor %}
-    </ul>
     {% endif %}
 {% endwith %}
-</div>
+</p>
 
-<div><a href="{{url_for('newMenuItem', restaurant_id=restaurant.id) }}">New Menu Item</a></div>
+<p><a href="{{url_for('newMenuItem', restaurant_id=restaurant.id) }}">New Menu Item</a></p>
 
 <dl>
 {% for item in items %}
